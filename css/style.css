@@ -1,4 +1,97 @@
-body {
-  color: #ffc400;
-  font-size: 16px;
-  background-color: #009ffc; }
+@charset "UTF-8";
+html {
+  height: 100vh; }
+
+.header {
+  background-color: #14213d;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .header__title {
+    color: #ffffff; }
+
+.navigation__button {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  top: 3.3vh; }
+
+.navigation__list {
+  display: none; }
+  .navigation__list--visible {
+    display: block; }
+
+.navigation__link {
+  display: block; }
+
+.main__header {
+  display: flex;
+  justify-content: center;
+  background-color: #e5e5e5; }
+
+.article {
+  display: grid;
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "jeden jeden" "dwa dwa" "dwa dwa"; }
+  .article__section {
+    border: solid #fca311 1px;
+    border-radius: 16px;
+    margin: 16px; }
+  .article__title {
+    background: #e5e5e5;
+    text-align: center; }
+    .article__title::before {
+      content: "🔸"; }
+  .article__text {
+    font-size: 18px;
+    margin: 10px;
+    color: #000000; }
+
+.aboutme {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-area: jeden;
+  background-color: #e5e5e5; }
+  .aboutme__title {
+    text-align: center;
+    background-color: #e5e5e5; }
+    .aboutme__title::before {
+      display: none; }
+  .aboutme__flex {
+    display: flex;
+    justify-content: space-around;
+    background: #04246a;
+    background: linear-gradient(90deg, #04246a 41%, #fca311 75%);
+    padding: 20px; }
+  .aboutme__text {
+    font-size: 22px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .aboutme__image {
+    height: 200px;
+    width: 200px; }
+
+.footer {
+  position: fixed;
+  height: 50px;
+  background-color: #14213d;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px; }
+  .footer__text {
+    text-align: center;
+    color: #ffffff; }
+
+@media (max-width: 768px) {
+  .header__title {
+    font-size: 20px; }
+  .article {
+    grid-template-columns: 1fr;
+    display: block; } }
